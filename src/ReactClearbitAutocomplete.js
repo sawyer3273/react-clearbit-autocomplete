@@ -99,7 +99,7 @@ var ReactClearbitAutocomplete = React.createClass({
 
   onSelect: function(index){
     var company = this.state.results[index];
-    this.setState({query: company.name, results: []});
+    this.setState({query: this.props.clearAfterSelect ? '' : company.name, results: []});
     this.props.onCompanySelect(company);
   },
 
