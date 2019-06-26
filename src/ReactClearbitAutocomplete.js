@@ -45,6 +45,7 @@ var ReactClearbitAutocomplete = React.createClass({
   },
 
   appendToQuery: function(e) {
+    this.props.onChangeInput && this.props.onChangeInput(e.target.value);
     this.setState({ query: e.target.value }, this.queryClearbit);
   },
 
