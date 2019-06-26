@@ -38,7 +38,7 @@ var ReactClearbitAutocomplete = React.createClass({
 
   getInitialState: function() {
       return {
-        query: '',
+        query: this.props.initValue ? this.props.initValue : '',
         results: [],
         highlightedIndex: null
       };
